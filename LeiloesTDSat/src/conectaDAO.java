@@ -17,17 +17,17 @@ import javax.swing.JOptionPane;
  */
 public class conectaDAO {
     
-    // Configuração do banco de dados (altere conforme necessário)
+   
     private static final String URL = "jdbc:mysql://localhost:3306/LeiloesTdSet?useSSL=false&allowPublicKeyRetrieval=true"; // Altere para seu banco
-    private static final String USUARIO = "root"; // Altere conforme sua configuração
-    private static final String SENHA = "0829"; // Altere conforme sua configuração
+    private static final String USUARIO = "root"; 
+    private static final String SENHA = "0829"; 
 
     
     public Connection connectDB(){
         Connection conn = null;
         
           try {
-            Class.forName("com.mysql.cj.jdbc.Driver"); // Certifique-se de ter o driver MySQL
+            Class.forName("com.mysql.cj.jdbc.Driver"); 
             conn = DriverManager.getConnection(URL, USUARIO, SENHA);
             System.out.println("Conexão estabelecida com sucesso!");
         } catch (ClassNotFoundException e) {

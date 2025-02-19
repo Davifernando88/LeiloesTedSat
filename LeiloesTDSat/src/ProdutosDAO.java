@@ -8,11 +8,6 @@
  * @author Adm
  */
 
-import java.sql.PreparedStatement;
-import java.sql.Connection;
-import javax.swing.JOptionPane;
-import java.sql.ResultSet;
-import java.util.ArrayList;
 
 
 import java.sql.Connection;
@@ -42,7 +37,8 @@ public class ProdutosDAO {
 
             prep.executeUpdate(); // Executa a inserção
 
-            JOptionPane.showMessageDialog(null, "Produto cadastrado com sucesso!");
+          
+              JOptionPane.showMessageDialog(null, "Produto cadastrado com sucesso!");
         } catch (SQLException erro) {
             JOptionPane.showMessageDialog(null, "Erro ao cadastrar produto: " + erro.getMessage());
         } finally {
@@ -52,7 +48,7 @@ public class ProdutosDAO {
             } catch (SQLException erro) {
                 System.out.println("Erro ao fechar conexão: " + erro.getMessage());
             }
-        } // **Fechando corretamente o bloco do método**
+        } 
     }
 
     public ArrayList<ProdutosDTO> listarProdutos() {
